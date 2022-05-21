@@ -8,7 +8,9 @@ import { addUser, getUser, getUsersInRoom, removeUser } from "./users";
 const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
-  cors: { origin: "https://chat-app-amngo.vercel.app/" },
+  cors: {
+    origin: ["http://localhost:3000", "https://chat-app-amngo.vercel.app"],
+  },
 });
 
 io.on("connection", (socket) => {
