@@ -23,5 +23,5 @@
     "tailwind.config.js",
     "next.config.js"
   ],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "server"]
 }
