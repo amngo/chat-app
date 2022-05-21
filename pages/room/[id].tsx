@@ -15,6 +15,9 @@ interface Props {
 
 let socket: Socket;
 
+const ENDPOINT: string =
+  process.env.NEXT_PUBLIC_ENDPOINT || "http://localhost:5000";
+
 function Room({ id }: Props) {
   const router = useRouter();
   const [messages, setMessages] = useState<any>([]);
@@ -23,7 +26,7 @@ function Room({ id }: Props) {
 
   // establish socket connection
   useEffect(() => {
-    socket = io("http://localhost:5000");
+    socket = io(ENDPOINT);
     socket.emit(
       "join",
       { name: data.name, room: id, avatar: data.avatar },

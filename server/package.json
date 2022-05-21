@@ -4,7 +4,7 @@
   "description": "backend for chat application",
   "main": "index.ts",
   "scripts": {
-    "server": "nodemon index.ts"
+    "start": "nodemon index.ts"
   },
   "author": "Andy Ngo",
   "license": "MIT",
