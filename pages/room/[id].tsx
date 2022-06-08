@@ -20,7 +20,13 @@ const ENDPOINT: string =
 
 function Room({ id }: Props) {
   const router = useRouter();
-  const [messages, setMessages] = useState<any>([]);
+  const [messages, setMessages] = useState<any>([
+    {
+      id: "9999",
+      user: "admin",
+      text: "Connecting to the server...",
+    },
+  ]);
   const [userList, setUserList] = useState<any>([]);
   const { data } = useStore((state) => state);
 
